@@ -2,9 +2,10 @@
 * [wanted_pre_onboarding]
 
 <br/>
-## 1. 현한 방법과 이유에 대한 간략한 내용
-## 2. Error Handling Log
-## 3. 실행 방법
+
+## 구현한 방법과 이유에 대한 간략한 내용
+## Error Handling Log
+## 실행 방법
 
 
 ## 과제 > 여섯 가지의 예시 중에서 2가지 이상을 구현 
