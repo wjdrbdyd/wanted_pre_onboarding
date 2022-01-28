@@ -1,10 +1,11 @@
 import React from "react";
-
 import "./App.css";
+import Tab from "./component/Tab";
+
 function App() {
   return (
     <div className="App">
-      <h1>Wanted 프리온보딩 Start</h1>
+      <Tab title={"Tab"} />
     </div>
   );
 }
