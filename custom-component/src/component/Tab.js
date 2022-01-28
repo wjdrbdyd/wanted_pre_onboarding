@@ -15,12 +15,11 @@ const allTab = [
   },
 ];
 
-const Tab = ({ title }) => {
+const Tab = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <div className={styles.container}>
-      <h3 className={styles.title}>{title}</h3>
+    <div className={styles.directions}>
       <div className={styles.tap_wrap}>
         {allTab.map((tab, index) => (
           <button

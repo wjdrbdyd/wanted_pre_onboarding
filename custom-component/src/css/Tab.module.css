@@ -1,32 +1,23 @@
-.container {
-  border-radius: 10px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  padding: 15px 50px;
-  position: relative;
-  overflow: hidden;
-}
-
-.title {
-  position: absolute;
-  top: 10px;
-  left: 15px;
-  font-size: 18px;
-  font-weight: 800;
+.directions {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .tap_wrap {
-  margin-left: 5px;
+  box-sizing: border-box;
+  margin-left: 55px;
+  margin-top: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #e0e0e0;
-  padding-left: 50px;
-  width: 100%;
+  padding-left: 40px;
 }
 .tab_button {
   text-align: left;
   background-color: #e0e0e0;
   color: #9c9c9c;
-  width: 33%;
+  width: 33.3%;
   border: none;
   font-size: 15px;
   font-weight: 600;
@@ -35,14 +26,13 @@
 }
 
 .tab_button__active {
-  background-color: #4900ce;
+  background-color: var(--button-color);
   color: white;
-  box-shadow: 0px 1px 1px 0.5px black inset,
-    0px 2px 2px 0.5px rgba(0, 0, 0, 0.4) inset;
+  box-shadow: var(--basic-box-shadow);
 }
 .contents {
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 250px;
 }
