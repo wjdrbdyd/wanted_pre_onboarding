@@ -3,6 +3,7 @@ import "./App.css";
 import ClickToEdit from "./component/ClickToEdit";
 import Modal from "./component/Modal";
 import Tab from "./component/Tab";
+import Tag from "./component/Tag";
 
 function App() {
   return (
@@ -15,9 +16,13 @@ function App() {
         <h3 className="title">Modal</h3>
         <Modal />
       </div> */}
-      <div className="container">
+      {/* <div className="container">
         <h3 className="title">ClickToEdit</h3>
         <ClickToEdit />
+      </div> */}
+      <div className="container">
+        <h3 className="title">Tag</h3>
+        <Tag />
       </div>
     </div>
   );

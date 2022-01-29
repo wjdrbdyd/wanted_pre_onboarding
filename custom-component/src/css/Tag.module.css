@@ -1,0 +1,41 @@
+.tag_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.tag_list {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+.tag {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 30px;
+  margin: 5px;
+  background-color: var(--button-color);
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 4px 8px;
+  box-shadow: var(--basic-box-shadow);
+  text-shadow: var(--basic-text-shadow);
+}
+.tag_list button {
+  background-color: white;
+  font-size: 14px;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+.tag_list input {
+  height: 20px;
+  border: none;
+}
+
+.tag_list input:focus {
+  outline: none;
+}
