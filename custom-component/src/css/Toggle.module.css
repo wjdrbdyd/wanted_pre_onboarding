@@ -1,0 +1,51 @@
+.toggle_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.toggle_bar {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background-color: #c5c5c5;
+  height: 40px;
+  width: 90px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.toggle_off {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 40px;
+  width: 100px;
+  transform: translateX(-90px);
+  border-radius: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  transition: all 0.3s;
+}
+.toggle_on {
+  transform: translateX(0px);
+  background-color: var(--button-color);
+}
+.toggle_off + button {
+  transform: translateX(0px);
+  margin-left: 5px;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+  transition: transform 0.3s;
+}
+.toggle_on + button {
+  transform: translateX(50px);
+}
