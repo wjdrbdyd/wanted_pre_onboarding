@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import "./App.css";
 import AutoComplete from "./component/AutoComplete";
 import ClickToEdit from "./component/ClickToEdit";
@@ -7,33 +8,51 @@ import Tab from "./component/Tab";
 import Tag from "./component/Tag";
 import Toggle from "./component/Toggle";
 
+const Assignment = styled.div`
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 2px solid ${(props) => props.theme.borderColor};
+  position: relative;
+  margin-bottom: 10px;
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+`;
+const Title = styled.div`
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 18px;
+  font-weight: 800;
+`;
+
 function App() {
   return (
-    <div className="App">
-      <div className="container">
-        <h3 className="title">Tab</h3>
+    <div>
+      <Assignment>
+        <Title>Tab</Title>
         <Tab />
-      </div>
-      <div className="container">
-        <h3 className="title">Modal</h3>
+      </Assignment>
+      {/* <Assignment>
+        <Title>Modal</Title>
         <Modal />
-      </div>
-      <div className="container">
-        <h3 className="title">ClickToEdit</h3>
+      </Assignment> */}
+      {/* <Assignment>
+        <Title>ClickToEdit</Title>
         <ClickToEdit />
-      </div>
-      <div className="container">
-        <h3 className="title">Tag</h3>
+      </Assignment> */}
+      {/* <Assignment>
+        <Title>Tag</Title>
         <Tag />
-      </div>
-      <div className="container">
-        <h3 className="title">Toggle</h3>
+      </Assignment>
+      <Assignment>
+        <Title>Toggle</Title>
         <Toggle />
-      </div>
-      <div className="container ">
-        <h3 className="title">AutoComplete</h3>
+      </Assignment>
+      <Assignment>
+        <Title>AutoComplete</Title>
         <AutoComplete />
-      </div>
+      </Assignment> */}
     </div>
   );
 }
