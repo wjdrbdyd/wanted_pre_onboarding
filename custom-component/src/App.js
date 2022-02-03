@@ -30,29 +30,29 @@ function App() {
   return (
     <div>
       <Assignment>
-        <Title>Tab</Title>
-        <Tab />
+        <Title>Toggle</Title>
+        <Toggle />
       </Assignment>
       <Assignment>
         <Title>Modal</Title>
         <Modal />
       </Assignment>
       <Assignment>
-        <Title>ClickToEdit</Title>
-        <ClickToEdit />
+        <Title>Tab</Title>
+        <Tab />
       </Assignment>
-      {/* <Assignment>
+      <Assignment>
         <Title>Tag</Title>
         <Tag />
       </Assignment>
       <Assignment>
-        <Title>Toggle</Title>
-        <Toggle />
-      </Assignment>
-      <Assignment>
         <Title>AutoComplete</Title>
         <AutoComplete />
-      </Assignment> */}
+      </Assignment>
+      <Assignment>
+        <Title>ClickToEdit</Title>
+        <ClickToEdit />
+      </Assignment>
     </div>
   );
 }

@@ -1,5 +1,47 @@
 import React, { useState } from "react";
-import styles from "../css/Tag.module.css";
+import styled from "styled-components";
+
+const TagWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+`;
+const TagList = styled.div`
+  border: 2px solid ${(props) => props.theme.borderColor};
+  border-radius: 5px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  button {
+    background-color: white;
+    font-size: 14px;
+    margin-left: 10px;
+    border-radius: 50%;
+  }
+  input {
+    height: 20px;
+    border: none;
+  }
+  input:focus {
+    outline: none;
+  }
+`;
+const STag = styled.div`
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 30px;
+  margin: 5px;
+  background-color: ${(props) => props.theme.buttonColor};
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 4px 8px;
+  box-shadow: ${(props) => props.theme.boxShadow};
+  text-shadow: ${(props) => props.theme.textShadow};
+`;
+
 const Tag = () => {
   const [tagList, setTagList] = useState(["CodeStates", "JJang"]);
   const [inputVal, setInputVal] = useState("");
@@ -23,13 +65,13 @@ const Tag = () => {
   };
   console.log(tagList);
   return (
-    <div className={styles.tag_wrapper}>
-      <div className={styles.tag_list}>
+    <TagWrapper>
+      <TagList>
         {tagList.map((tag, idx) => (
-          <div key={idx} className={styles.tag}>
+          <STag key={idx}>
             <span>{tag}</span>
             <button onClick={() => deletTag(idx)}>x</button>
-          </div>
+          </STag>
         ))}
 
         <input
@@ -39,8 +81,8 @@ const Tag = () => {
           type="text"
           placeholder="Press enter to add tags"
         />
-      </div>
-    </div>
+      </TagList>
+    </TagWrapper>
   );
 };
 
