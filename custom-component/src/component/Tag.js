@@ -58,12 +58,11 @@ const Tag = () => {
     if (e.key === "Enter") {
       const copyTagList = [...tagList];
       copyTagList.push(inputVal);
-      console.log(copyTagList);
       setTagList(copyTagList);
       setInputVal("");
     }
   };
-  console.log(tagList);
+
   return (
     <TagWrapper>
       <TagList>
