@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import styles from "../css/Tab.module.css";
+
 const allTab = [
   {
     tabName: "Tab1",
@@ -68,9 +68,7 @@ const Tab = () => {
           </TabButton>
         ))}
       </Tabs>
-      <TabContents className={styles.contents}>
-        {allTab[currentIndex].content}
-      </TabContents>
+      <TabContents>{allTab[currentIndex].content}</TabContents>
     </TabWrapper>
   );
 };
