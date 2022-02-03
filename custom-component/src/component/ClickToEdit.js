@@ -1,6 +1,46 @@
-import { getDefaultNormalizer } from "@testing-library/react";
 import React, { useState } from "react";
-import styles from "../css/ClickToEdit.module.css";
+import styled from "styled-components";
+
+const EditWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  margin-top: 40px;
+`;
+const ViewInputBox = styled.div`
+  font-size: 16px;
+  padding: 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const Label = styled.label`
+  height: 35px;
+  margin-right: 10px;
+`;
+const Input = styled.input`
+  text-align: center;
+  width: 150px;
+  padding-bottom: 16px;
+  font-size: 14px;
+  &:focus {
+    border: 3px solid #81abbb;
+    outline: none;
+    height: 35px;
+    width: 150px;
+    padding-bottom: 0;
+    font-size: 12px;
+  }
+`;
+const View = styled.p`
+  border: 1px solid rgb(0, 0, 0, 0.5);
+  width: 150px;
+  font-size: 14px;
+  height: 35px;
+  text-align: center;
+`;
 
 const ClickToEdit = () => {
   const [person, setPerson] = useState({ name: "김코딩", age: "33" });
@@ -13,7 +53,6 @@ const ClickToEdit = () => {
 
   const changePerson = (e) => {
     const { name, value } = e.target;
-    console.log("1");
     setPerson({
       ...person,
       [name]: value,
@@ -21,39 +60,21 @@ const ClickToEdit = () => {
   };
 
   const onEdit = (name) => {
-    console.log("2");
     setEditMode({ ...editMode, [name]: true });
   };
 
   const onBlur = (e) => {
-    console.log("3");
     const { name, value } = e.target;
     setEditPerson({ ...person, [name]: value });
     setEditMode({ ...editMode, [name]: false });
   };
 
-  // const onEdit = (e) => {
-  //   const { type } = e;
-  //   const { name, value } = e.target;
-
-  //   let status = type === "click" ? true : false;
-  //   setEditPerson({
-  //     ...editPerson,
-  //     [name]: value,
-  //   });
-  //   console.log(status);
-  //   setEditMode({
-  //     ...editMode,
-  //     [name]: status,
-  //   });
-  // };
-  console.log(editMode);
   return (
-    <div className={styles.edit_wrap}>
-      <div className={styles.view_input_box}>
-        <label>이름</label>
+    <EditWrapper>
+      <ViewInputBox>
+        <Label>이름</Label>
         {editMode.name ? (
-          <input
+          <Input
             onBlur={onBlur}
             name="name"
             value={person.name}
@@ -61,13 +82,13 @@ const ClickToEdit = () => {
             onChange={changePerson}
           />
         ) : (
-          <p onClick={() => onEdit("name")}>{person.name}</p>
+          <View onClick={() => onEdit("name")}>{person.name}</View>
         )}
-      </div>
-      <div className={styles.view_input_box}>
-        <label>나이</label>
+      </ViewInputBox>
+      <ViewInputBox>
+        <Label>나이</Label>
         {editMode.age ? (
-          <input
+          <Input
             onBlur={onBlur}
             name="age"
             value={person.age}
@@ -75,14 +96,14 @@ const ClickToEdit = () => {
             onChange={changePerson}
           />
         ) : (
-          <p onClick={() => onEdit("age")}>{person.age}</p>
+          <View onClick={() => onEdit("age")}>{person.age}</View>
         )}
-      </div>
+      </ViewInputBox>
 
       <p>
         이름 {editPerson.name} 나이 {editPerson.age}
       </p>
-    </div>
+    </EditWrapper>
   );
 };
 

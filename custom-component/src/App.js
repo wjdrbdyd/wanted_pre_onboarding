@@ -33,14 +33,14 @@ function App() {
         <Title>Tab</Title>
         <Tab />
       </Assignment>
-      {/* <Assignment>
+      <Assignment>
         <Title>Modal</Title>
         <Modal />
-      </Assignment> */}
-      {/* <Assignment>
+      </Assignment>
+      <Assignment>
         <Title>ClickToEdit</Title>
         <ClickToEdit />
-      </Assignment> */}
+      </Assignment>
       {/* <Assignment>
         <Title>Tag</Title>
         <Tag />
