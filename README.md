@@ -40,7 +40,7 @@ ClickToEdit는 `editMode` 상태값에 따라 editMode On(true)이면 input tag�
 ### Error Handling Log
 사전과제중 ClickToEdit가 가장 어려웠다. 처음 구현해보는 것이기도 했고 gif만보고 처음 구현할 때는 `editMode`상태에 따라 input태그에 doubleclick event로 readonly속성을 넣어서 구현 했었다.  
 그 때 문제점으로 예시 gif와 다르게 읽기전용일 때 글자의 위치를 위쪽 경계선으로 맞추는데 있어 어려움과 예시에서는 doubleclick으로의 동작이 아니어서 그냥 click으로 변경하였더니 readonly속성이 있으나 없으나 다른점이 없었다.  
-그리하여 잘못된 접근이라 생각하여 clickToEdit검색을 하였더니 `editMode`에 따라 input tag와 p tag로 나누어 보여주는걸 확인했다.    `ClickToEdit`과제는 구현은 직접하였으나 문제해결 아이디어는 직접 도출해내지 못했기에 반쪽자리 성공이라 생각한다.   마지막으로 UI또한 작성시점 기준으로 완벽하지 못한상태로서 다시 한번 점검 해야한다.
+그리하여 잘못된 접근이라 생각하여 clickToEdit검색을 하였더니 `editMode`에 따라 input tag와 p tag로 나누어 보여주는걸 확인했다.    `ClickToEdit`과제는 구현은 직접하였으나 문제해결 아이디어는 직접 도출해내지 못했기에 반쪽자리 성공이라 생각한다.  
 
 ## 과제 > 여섯 가지의 예시 중에서 2가지 이상을 구현 
 * Toggle.js
